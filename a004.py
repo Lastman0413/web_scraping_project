@@ -13,5 +13,6 @@ https://www.toptal.com/developers/gitignore
   git remote add origin url : 원격 저장소 연결
   원격과 로컬이 연결 되면 내 깃허브 주소를 알려주어야함
 
+  config 이름 이메일 연결
 
 """
