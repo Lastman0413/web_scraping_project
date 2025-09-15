@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+                overflow: hidden;
+            }
+            .container {
+                font-size: 10px;
+                width: 40em;
+                height: 40em;
+                position: relative;
+            }
+            .sun {
+                position: absolute;
+                top: 15em;
+                left: 15em;
+                width: 10em;
+                height: 10em;
+                background-color: yellow;
+                border-radius: 50%;
+                box-shadow: 0 0 3em white;
+            }
+            .orbit {
+                position: absolute;
+                border-style: solid;
+                border-color: rgba(255, 255, 255, 0.2);
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+            }
+            .planet {
+                position: absolute;
+                border-radius: 50%;
+                /* 행성을 궤도 원의 가장자리에 위치시키기 위해 공통 설정 */
+                top: 50%; 
+                transform: translateY(-50%);
+            }
+            
+            /* 수성 */
+            .mercury-orbit {
+                top: 14em;
+                left: 14em;
+                width: 12em;
+                height: 12em;
+                animation: orbit 8.8s linear infinite;
+            }
+            .mercury {
+                right: 0;
+                width: 0.5em;
+                height: 0.5em;
+                background-color: #8c8c8c;
+            }
+            
+            /* 금성 */
+            .venus-orbit {
+                top: 11.5em;
+                left: 11.5em;
+                width: 17em;
+                height: 17em;
+                animation: orbit 22.5s linear infinite;
+            }
+            .venus {
+                right: 0;
+                width: 1em;
+                height: 1em;
+                background-color: #ff9933;
+            }
+
+            /* 지구 */
+            .earth-orbit {
+                top: 8em;
+                left: 8em;
+                width: 24em;
+                height: 24em;
+                animation: orbit 36.5s linear infinite;
+            }
+            .earth {
+                right: 0;
+                width: 1.2em;
+                height: 1.2em;
+                background-color: aqua;
+            }
+            
+            /* 화성 */
+            .mars-orbit {
+                top: 6em;
+                left: 6em;
+                width: 28em;
+                height: 28em;
+                animation: orbit 68.7s linear infinite;
+            }
+            .mars {
+                right: 0;
+                width: 0.8em;
+                height: 0.8em;
+                background-color: #d84315;
+            }
+            
+            /* 목성 */
+            .jupiter-orbit {
+                top: -5em;
+                left: -5em;
+                width: 50em;
+                height: 50em;
+                animation: orbit 433s linear infinite;
+            }
+            .jupiter {
+                right: 0;
+                width: 3em;
+                height: 3em;
+                background-color: #c79e6f;
+            }
+
+            /* 토성 */
+            .saturn-orbit {
+                top: -15em;
+                left: -15em;
+                width: 70em;
+                height: 70em;
+                animation: orbit 1076s linear infinite;
+            }
+            .saturn {
+                right: 0;
+                width: 2.5em;
+                height: 2.5em;
+                background-color: #d1c19b;
+            }
+            
+            /* 천왕성 */
+            .uranus-orbit {
+                top: -25em;
+                left: -25em;
+                width: 90em;
+                height: 90em;
+                animation: orbit 3069s linear infinite;
+            }
+            .uranus {
+                right: 0;
+                width: 2em;
+                height: 2em;
+                background-color: #a0f4ff;
+            }
+
+            /* 해왕성 */
+            .neptune-orbit {
+                top: -35em;
+                left: -35em;
+                width: 110em;
+                height: 110em;
+                animation: orbit 6020s linear infinite;
+            }
+            .neptune {
+                right: 0;
+                width: 1.8em;
+                height: 1.8em;
+                background-color: #4b71ff;
+            }
+            
+            @keyframes orbit {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="sun"></div>
+            <div class="orbit mercury-orbit"><div class="planet mercury"></div></div>
+            <div class="orbit venus-orbit"><div class="planet venus"></div></div>
+            <div class="orbit earth-orbit"><div class="planet earth"></div></div>
+            <div class="orbit mars-orbit"><div class="planet mars"></div></div>
+            <div class="orbit jupiter-orbit"><div class="planet jupiter"></div></div>
+            <div class="orbit saturn-orbit"><div class="planet saturn"></div></div>
+            <div class="orbit uranus-orbit"><div class="planet uranus"></div></div>
+            <div class="orbit neptune-orbit"><div class="planet neptune"></div></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+                overflow: hidden;
+            }
+            .container {
+                font-size: 10px;
+                width: 40em;
+                height: 40em;
+                position: relative;
+            }
+            .sun {
+                position: absolute;
+                top: 15em;
+                left: 15em;
+                width: 10em;
+                height: 10em;
+                background-color: yellow;
+                border-radius: 50%;
+                box-shadow: 0 0 3em white;
+            }
+            .earth-orbit {
+                position: absolute;
+                top: 5em;
+                left: 5em;
+                width: 30em;
+                height: 30em;
+                border: 0.1em solid rgba(255, 255, 255, 0.5); /* 궤도 투명도 조절 */
+                border-radius: 50%;
+                animation: orbit 36.5s linear infinite;
+            }
+            .earth {
+                position: absolute;
+                top: 2.8em;
+                right: 2.8em;
+                width: 3em;
+                height: 3em;
+                background-color: aqua;
+                border-radius: 50%;
+            }
+            .moon-orbit {
+                position: absolute;
+                /* 달의 궤도 크기를 지구보다 충분히 크게 조정 */
+                top: -3em; 
+                left: -3em; 
+                width: 9em; 
+                height: 9em;
+                border: 0.1em solid rgba(255, 255, 255, 0.5); /* 궤도 투명도 조절 */
+                border-radius: 50%;
+                animation: orbit 2.7s linear infinite;
+            }
+            .moon {
+                position: absolute;
+                /* 달의 위치를 궤도 가장자리에 배치 */
+                top: 0.5em; 
+                right: 0.5em;
+                width: 1.2em;
+                height: 1.2em;
+                background-color: silver;
+                border-radius: 50%;
+            }
+            @keyframes orbit {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="sun"></div>
+            <div class="earth-orbit">
+                <div class="earth">
+                    <div class="moon-orbit">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
